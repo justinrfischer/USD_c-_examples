@@ -1,3 +1,23 @@
+# CMake build artifacts
 build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled objects
+*.o
+*.a
+*.dylib
+
+# Generated USD output
 output_*.usda
-*.DS_Store
+
+# IDE & editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+compile_commands.json
