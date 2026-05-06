@@ -58,7 +58,7 @@ VtArray<GfVec3f> smooth(numVerts, GfVec3f(0,0,0));
 for (auto& n : smooth) n.Normalize();
 ```
 
-**Area-weighting:** Multiply the face normal by face area (length of the cross product before normalizing) before accumulating. Gives better results on irregular meshes. The simple version above gives equal weight to all faces regardless of size.
+**Area-weighting:** The code above accumulates the *unnormalized* cross product, whose magnitude is proportional to face area. This means larger faces contribute more to the vertex normal — this IS area-weighted accumulation, which gives better results on irregular meshes. For equal-weight accumulation, normalize the face normal before accumulating.
 
 ## UV Interpolation Modes (again, because it comes up)
 

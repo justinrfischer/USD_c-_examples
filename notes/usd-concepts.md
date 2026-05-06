@@ -27,7 +27,7 @@
 
 ## Composition Arcs — LIVRPS (strength order, strongest first)
 
-- **L** — Local opinions (prims authored directly in the current layer)
+- **L** — Local opinions (opinions from any layer in the active layer stack, evaluated strongest-to-weakest — not just the "current" layer; a sublayer override is still a Local opinion and beats Inherits)
 - **I** — Inherits (class-based inheritance via `inherits` arc)
 - **V** — VariantSets (switchable variations, e.g. LOD or material)
 - **R** — References (include another file/prim)

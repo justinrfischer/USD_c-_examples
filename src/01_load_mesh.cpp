@@ -33,9 +33,12 @@ void runLoadMesh(const std::string& assetPath) {
     }
     std::cout << "Mesh path: " << mesh.GetPath() << "\n";
 
-    // Read vertex positions
+    // Read vertex positions — Get() returns false if attribute missing or type mismatch
     VtArray<GfVec3f> points;
-    mesh.GetPointsAttr().Get(&points);
+    if (!mesh.GetPointsAttr().Get(&points)) {
+        std::cerr << "Failed to read points attribute\n";
+        return;
+    }
     std::cout << "Vertex count: " << points.size() << "\n";
     std::cout << "First 5 vertices:\n";
     printVec3fArray(points, 5);
@@ -48,9 +51,11 @@ void runLoadMesh(const std::string& assetPath) {
     VtArray<int> faceVertexIndices;
     mesh.GetFaceVertexIndicesAttr().Get(&faceVertexIndices);
     std::cout << "Face-vertex index count: " << faceVertexIndices.size() << "\n";
-    std::cout << "First face indices: ";
-    for (int i = 0; i < faceVertexCounts[0]; ++i) {
-        std::cout << faceVertexIndices[i] << " ";
+    if (!faceVertexCounts.empty()) {
+        std::cout << "First face indices: ";
+        for (int i = 0; i < faceVertexCounts[0]; ++i) {
+            std::cout << faceVertexIndices[i] << " ";
+        }
+        std::cout << "\n";
     }
-    std::cout << "\n";
 }
