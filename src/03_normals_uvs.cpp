@@ -1,6 +1,7 @@
 #include "03_normals_uvs.h"
 #include "utils.hpp"
 #include "pxr/usd/usd/stage.h"
+#include "pxr/usd/usd/primRange.h"
 #include "pxr/usd/usdGeom/mesh.h"
 #include "pxr/usd/usdGeom/primvarsAPI.h"
 #include "pxr/usd/usdGeom/tokens.h"

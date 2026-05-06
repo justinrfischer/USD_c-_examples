@@ -1,6 +1,7 @@
 #include "04_blend_shapes.h"
 #include "utils.hpp"
 #include "pxr/usd/usd/stage.h"
+#include "pxr/usd/usd/primRange.h"
 #include "pxr/usd/usdSkel/blendShape.h"
 #include "pxr/usd/sdf/path.h"
 #include "pxr/base/gf/vec3f.h"

@@ -1,6 +1,7 @@
 #include "02_edit_mesh.h"
 #include "utils.hpp"
 #include "pxr/usd/usd/stage.h"
+#include "pxr/usd/usd/primRange.h"
 #include "pxr/usd/usdGeom/mesh.h"
 #include "pxr/base/vt/array.h"
 #include "pxr/base/gf/vec3f.h"

@@ -19,16 +19,17 @@ add_executable(usd-mesh-lab
 target_include_directories(usd-mesh-lab PRIVATE
     $ENV{HOME}/usd-install/include
     src/
+    /Library/Frameworks/Python.framework/Versions/3.13/include/python3.13
 )
 
 target_link_libraries(usd-mesh-lab PRIVATE
-    usd_usd
-    usd_usdGeom
-    usd_usdSkel
-    usd_gf
-    usd_vt
-    usd_tf
-    usd_sdf
+    usd
+    usdGeom
+    usdSkel
+    gf
+    vt
+    tf
+    sdf
 )
 
 # Embed rpath so macOS finds the dylibs without DYLD_LIBRARY_PATH

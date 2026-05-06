@@ -1,6 +1,7 @@
 #include "05_skinning.h"
 #include "utils.hpp"
 #include "pxr/usd/usd/stage.h"
+#include "pxr/usd/usd/primRange.h"
 #include "pxr/usd/usdGeom/mesh.h"
 #include "pxr/usd/usdSkel/root.h"
 #include "pxr/usd/usdSkel/skeleton.h"
