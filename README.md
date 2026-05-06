@@ -1,6 +1,6 @@
 # USD Mesh Lab
 
-C++ interview prep environment for USD mesh I/O, UsdSkel, blend shapes, normals, and skinning.
+C++ examples for USD mesh I/O, UsdSkel, blend shapes, normals, and skinning.
 
 ## Setup
 
@@ -26,7 +26,7 @@ make -j$(sysctl -n hw.logicalcpu)
 - `notes/usd-concepts.md` — Stage/Layer/Prim, LIVRPS, primvar interpolation, UsdSkel
 - `notes/mesh-math.md` — LBS formula, blend shapes, normal recompute, UV modes
 
-## Key Interview Talking Points
+## Key Concepts
 
 1. **Why USD?** Composition arcs (LIVRPS) let multiple teams work on the same asset simultaneously via layers. The final scene is a non-destructive view over all contributions.
 2. **Primvar interpolation** — faceVarying vs vertex is a common gotcha. UVs need faceVarying for seams.

@@ -1,4 +1,4 @@
-# USD Concepts — Interview Reference
+# USD Concepts
 
 ## The Core Object Model
 
@@ -23,7 +23,7 @@
 | `vertex` | 1 per vertex | Smooth normals, joint weights |
 | `faceVarying` | 1 per face-vertex | UVs (each face corner has its own) |
 
-**Key interview point:** UVs are almost always `faceVarying` because a cube's corner needs different UV coordinates for each of the 3 faces it touches. `vertex` interpolation cannot express seams.
+**Note:** UVs are almost always `faceVarying` because a cube's corner needs different UV coordinates for each of the 3 faces it touches. `vertex` interpolation cannot express seams.
 
 ## Composition Arcs — LIVRPS (strength order, strongest first)
 
@@ -77,4 +77,4 @@ SkelRoot             ← required ancestor; controls bounding volume
 - `stage->Save()` — writes to the **root layer's** original file path. Mutates in place.
 - `stage->Export(path)` — writes a **flattened** single-layer copy to a new path. Safe for producing deliverables without touching source files.
 
-For interview work: always use `Export` so you never accidentally corrupt the source asset.
+Always use `Export` so you never accidentally corrupt the source asset.
