@@ -14,6 +14,7 @@ add_executable(usd-mesh-lab
     src/03_normals_uvs.cpp
     src/04_blend_shapes.cpp
     src/05_skinning.cpp
+    src/06_smooth.cpp
 )
 
 target_include_directories(usd-mesh-lab PRIVATE
